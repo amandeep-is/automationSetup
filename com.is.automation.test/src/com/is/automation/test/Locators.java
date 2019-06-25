@@ -1,6 +1,11 @@
 package com.is.automation.test;
 
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -58,10 +63,67 @@ public class Locators
 	static By shopifyPartner_addStore_devStore= By.id("//input[@name='ChoiceList2' and @value = 'dev_store']");
 
 	static By shopifyPartner_captcha = By.xpath("//div[@class='rc-anchor rc-anchor-normal rc-anchor-light']");
+	
+	
+	//Frontier
+	
+	public static List<By> GetAllUrlMap(){
+		List<By> list = new ArrayList<By>();
+		//list.add(By.xpath("//p//a[contains(text(),'Bac')]"));
+		//list.add(By.xpath("//p//a[contains(text(),'Baking Flavors & Extracts')]"));
+		//list.add(By.xpath("//p//a[contains(text(),'Bottled Herbs & Spices')]"));
+		//	list.add(By.xpath("//p//a[contains(text(),'Grinders')]"));
+//		list.add(By.xpath("//p//a[contains(text(),'Merchandising & Displays')]"));
+//		list.add(By.xpath("//p//a[contains(text(),'Salt Free Seasoning Shakers')]"));
+//		list.add(By.xpath("//p//a[contains(text(),'Baking Flavors & Extracts')]"));
+//		list.add(By.xpath("//p//a[contains(text(),'Sea Salts & Pepper')]"));
+//		list.add(By.xpath("//p//a[contains(text(),'Vanillas of the World')]"));
+//		list.add(By.xpath("//p//a[contains(text(),'Vegetable Glycerin')]"));
+		list.add(By.xpath("//a[contains(text(),'Bulk Displays')]"));
+		list.add(By.xpath("//a[contains(text(),'Bulk Tea')]"));
+		list.add(By.xpath("//a[contains(text(),'Bulk Gourmet Salts')]"));
+		list.add(By.xpath("//a[contains(text(),'Organic Fair Trade Certified™ Packaged Loose-Leaf Teas')]"));
+		list.add(By.xpath("//a[contains(text(),'Bulk Spice Piles')]"));
+		list.add(By.xpath("//a[contains(text(),'Organic Packaged Bulk Herbs')]"));
+		list.add(By.xpath("//a[contains(text(),'Organic Packaged Bulk Spices & Seasonings')]"));
+		list.add(By.xpath("//a[contains(text(),'Packaged Bulk Merchandising & Displays')]"));
+		
+		
+		
+		return list;
+	}
 
+	
 
-
-
-
-
+	static By url_Bac = By.xpath("//p//a[contains(text(),'Bac')]");
+	
+	/*
+	 * static By url_Baking_Flavors =
+	 * By.xpath("//p//a[contains(text(),'Baking Flavors & Extracts')]");
+	 * 
+	 * static By url_BottledHerbs =
+	 * By.xpath("//p//a[contains(text(),'Bottled Herbs & Spices')]"); static By
+	 * url_Grinders = By.xpath("//p//a[contains(text(),'Grinders')]"); static By
+	 * url_Merchandising =
+	 * By.xpath("//p//a[contains(text(),'Merchandising & Displays')]"); static By
+	 * url_Oraganic_Al_Purpose =
+	 * By.xpath("//p//a[contains(text(),'Salt Free Seasoning Shakers')]"); static By
+	 * url_SaltFreeSeasoningShakers =
+	 * By.xpath("//p//a[contains(text(),'Baking Flavors & Extracts')]");
+	 */
+		
+	static By url_Seafood = By.xpath("//p//a[contains(text(),'Sea Salts & Pepper')]");
+	static By contentHead = By.xpath("//div[@id='content']//h1");
+	
+	static By url_Vanillas = By.xpath("//p//a[contains(text(),'Vanillas of the World')]");
+	static By url_VegetableGlycerin = By.xpath("//p//a[contains(text(),'Vegetable Glycerin')]");
+	static By url_BulkDisplays = By.xpath("//a[contains(text(),'Bulk Displays')]");
+	static By urlBulkTea_ = By.xpath("//a[contains(text(),'Bulk Tea')]");
+	static By url_BulkGourmetSalts = By.xpath("//a[contains(text(),'Bulk Gourmet Salts')]");
+	
+	static By url_BulkSpicePiles = By.xpath("//a[contains(text(),'Bulk Spice Piles')]");
+	static By url_OrganicFairTradeCertified = By.xpath("//a[contains(text(),'Organic Fair Trade Certified™ Packaged Loose-Leaf Teas')]");
+	static By url_OrganicPackagedBulkHerbs = By.xpath("//a[contains(text(),'Organic Packaged Bulk Herbs')]");
+	static By url_OrganicPackagedBulkSpicesSeasonings = By.xpath("//a[contains(text(),'Organic Packaged Bulk Spices & Seasonings')]");
+	static By url_PackagedBulkMerchandisingDisplays = By.xpath("//a[contains(text(),'Packaged Bulk Merchandising & Displays')]");
 }
