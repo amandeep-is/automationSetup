@@ -94,6 +94,47 @@ public class Locators
 	}
 
 	
+	public static List<By> GetAllUrlMapAC(){
+		List<By> list = new ArrayList<By>();
+//		list.add(By.xpath("//a[contains(text(),'100% Pure Essential Oils')]"));
+//		list.add(By.xpath("//a[contains(text(),'Aura Cacia Accessories')]"));
+		list.add(By.xpath("//a[contains(text(),'Air Freshening Spritz')]")); 
+		list.add(By.xpath("//a[contains(text(),'Aromatherapy Roll-ons')]"));
+		list.add(By.xpath("//a[contains(text(),'Aromatherapy Shower Tablets')]"));
+		list.add(By.xpath("//a[contains(text(),'Aura Cacia Baby')]"));
+		list.add(By.xpath("//a[contains(text(),' Body Butters')]"));
+		list.add(By.xpath("//a[contains(text(),'Body Oils')]"));
+		list.add(By.xpath("//a[contains(text(),'Body Soaks')]"));
+		list.add(By.xpath("//a[contains(text(),'Boxed Essential Oils')]"));
+		list.add(By.xpath("//a[contains(text(),'Boxed Essential Solutions™')]"));
+		list.add(By.xpath("//a[contains(text(),'Bubble Baths')]"));
+		list.add(By.xpath("//a[contains(text(),'Diffusers')]"));
+		list.add(By.xpath("//a[contains(text(),'Discover Line')]"));
+		list.add(By.xpath("//a[contains(text(),'DIY Essential Oil Blends')]"));
+		list.add(By.xpath("//a[contains(text(),'Electric Aromatherapy Air Fresheners')]"));
+		list.add(By.xpath("//a[contains(text(),'Empty Bottles')]"));
+		list.add(By.xpath("//a[contains(text(),'Essential Oil Blends')]"));
+		list.add(By.xpath("//a[contains(text(),'Essential Oil Roll-ons')]"));
+		list.add(By.xpath("//a[contains(text(),'Essential Solutions™')]"));
+		list.add(By.xpath("//a[contains(text(),'Foam Baths')]"));
+		list.add(By.xpath("//a[contains(text(),'Foam Bath for Kids')]"));
+		list.add(By.xpath("//a[contains(text(),'For the Home')]"));
+		list.add(By.xpath("//a[contains(text(),'Fruit Seed Oils')]"));
+		list.add(By.xpath("//a[contains(text(),'Home Care Blends')]"));
+		list.add(By.xpath("//a[contains(text(),'Massage Creams')]"));
+		list.add(By.xpath("//a[contains(text(),'Milk & Oat Bath')]"));
+		list.add(By.xpath("//a[contains(text(),'Mineral Baths')]"));
+		list.add(By.xpath("//a[contains(text(),'Mists')]"));
+		list.add(By.xpath("//a[contains(text(),'Organic Chakra Balancing Roll-Ons')]"));
+		list.add(By.xpath("//a[contains(text(),'Organic Essential Oils')]"));
+		list.add(By.xpath("//a[contains(text(),'Organic Facial Oil Serums')]"));
+		list.add(By.xpath("//a[contains(text(),'Organic Yoga Mists')]"));
+		list.add(By.xpath("//a[contains(text(),'Precious Essentials®')]"));
+		list.add(By.xpath("//a[contains(text(),'Skin Care Oils (conventional & organic)')]"));
+		return list;
+	}
+	
+	
 
 	static By url_Bac = By.xpath("//p//a[contains(text(),'Bac')]");
 	
@@ -114,6 +155,8 @@ public class Locators
 		
 	static By url_Seafood = By.xpath("//p//a[contains(text(),'Sea Salts & Pepper')]");
 	static By contentHead = By.xpath("//div[@id='content']//h1");
+	static By url_essentialsOils= By.xpath("//a[contains(text(),'100% Pure Essential Oils')]");
+	
 	
 	static By url_Vanillas = By.xpath("//p//a[contains(text(),'Vanillas of the World')]");
 	static By url_VegetableGlycerin = By.xpath("//p//a[contains(text(),'Vegetable Glycerin')]");

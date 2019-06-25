@@ -58,6 +58,31 @@ public class CustomLibarary extends Locators
 		return urlSet;
 
 	}
+	
+	
+	public Set<String> getAllURLs1() {
+		Set<String> urlSet = new HashSet<String>();
+
+		List<WebElement> allLinks = driver.findElements(By.tagName("class"));
+		System.out.println("Link Size "+allLinks.size());
+
+		for (int i = 0; i < allLinks.size(); i++) {
+			for (WebElement link : allLinks) 
+			{
+				if (link.getText().equalsIgnoreCase("item"))
+				{
+									
+					urlSet.add(link.getAttribute("href"));
+				}
+			}
+			
+		}
+		System.out.println(urlSet);
+		System.out.println();
+		return urlSet;
+
+	}
+	
 
 	public static void clearAndSend(By locator, String key)
 
