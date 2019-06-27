@@ -69,16 +69,16 @@ public class Locators
 	
 	public static List<By> GetAllUrlMap(){
 		List<By> list = new ArrayList<By>();
-		//list.add(By.xpath("//p//a[contains(text(),'Bac')]"));
-		//list.add(By.xpath("//p//a[contains(text(),'Baking Flavors & Extracts')]"));
-		//list.add(By.xpath("//p//a[contains(text(),'Bottled Herbs & Spices')]"));
-		//	list.add(By.xpath("//p//a[contains(text(),'Grinders')]"));
-//		list.add(By.xpath("//p//a[contains(text(),'Merchandising & Displays')]"));
-//		list.add(By.xpath("//p//a[contains(text(),'Salt Free Seasoning Shakers')]"));
-//		list.add(By.xpath("//p//a[contains(text(),'Baking Flavors & Extracts')]"));
-//		list.add(By.xpath("//p//a[contains(text(),'Sea Salts & Pepper')]"));
-//		list.add(By.xpath("//p//a[contains(text(),'Vanillas of the World')]"));
-//		list.add(By.xpath("//p//a[contains(text(),'Vegetable Glycerin')]"));
+		list.add(By.xpath("//p//a[contains(text(),'Bac')]"));
+		list.add(By.xpath("//p//a[contains(text(),'Baking Flavors & Extracts')]"));
+		list.add(By.xpath("//p//a[contains(text(),'Bottled Herbs & Spices')]"));
+		list.add(By.xpath("//p//a[contains(text(),'Grinders')]"));
+		list.add(By.xpath("//p//a[contains(text(),'Merchandising & Displays')]"));
+		list.add(By.xpath("//p//a[contains(text(),'Salt Free Seasoning Shakers')]"));
+		list.add(By.xpath("//p//a[contains(text(),'Baking Flavors & Extracts')]"));
+		list.add(By.xpath("//p//a[contains(text(),'Sea Salts & Pepper')]"));
+		list.add(By.xpath("//p//a[contains(text(),'Vanillas of the World')]"));
+		list.add(By.xpath("//p//a[contains(text(),'Vegetable Glycerin')]"));
 		list.add(By.xpath("//a[contains(text(),'Bulk Displays')]"));
 		list.add(By.xpath("//a[contains(text(),'Bulk Tea')]"));
 		list.add(By.xpath("//a[contains(text(),'Bulk Gourmet Salts')]"));
@@ -96,8 +96,8 @@ public class Locators
 	
 	public static List<By> GetAllUrlMapAC(){
 		List<By> list = new ArrayList<By>();
-//		list.add(By.xpath("//a[contains(text(),'100% Pure Essential Oils')]"));
-//		list.add(By.xpath("//a[contains(text(),'Aura Cacia Accessories')]"));
+		list.add(By.xpath("//a[contains(text(),'100% Pure Essential Oils')]"));
+		list.add(By.xpath("//a[contains(text(),'Aura Cacia Accessories')]"));
 		list.add(By.xpath("//a[contains(text(),'Air Freshening Spritz')]")); 
 		list.add(By.xpath("//a[contains(text(),'Aromatherapy Roll-ons')]"));
 		list.add(By.xpath("//a[contains(text(),'Aromatherapy Shower Tablets')]"));
@@ -134,6 +134,34 @@ public class Locators
 		return list;
 	}
 	
+	public static List<By> GetAllUrlMap_SO(){
+		List<By> list = new ArrayList<By>();
+		list.add(By.xpath("//a[contains(text(),'Bottled Spices')]"));
+		list.add(By.xpath("//a[contains(text(),'Coffee Spices')]"));
+		list.add(By.xpath("//a[contains(text(),'Grilling Seasons®')]"));
+		list.add(By.xpath("//a[contains(text(),'Grinder Top Seasonings')]"));
+		list.add(By.xpath("//a[contains(text(),'Mini Spices')]"));
+		list.add(By.xpath("//a[contains(text(),'Salt-Free Seasoning Blends')]"));
+		list.add(By.xpath("//a[contains(text(),'Spice Right Everyday Blends')]"));
+		list.add(By.xpath("//a[contains(text(),'Turkey Brine')]"));
+		list.add(By.xpath("//a[contains(text(),'Turkey Rub')]"));
+		list.add(By.xpath("//a[contains(text(),'Pepper Tin')]"));
+		list.add(By.xpath("//a[contains(text(),'Baking Flavors & Extracts')]"));
+		list.add(By.xpath("//a[contains(text(),'Entree Seasoning Mixes (Tacos, Pasta, Steam Gourmet...)')]"));
+		list.add(By.xpath("//a[contains(text(),'Sides Seasoning Mixes (Gravies, Veggies, Dressings & Mulling)')]"));
+		list.add(By.xpath("//a[contains(text(),'Simmer Sauces & Pouches')]"));
+		list.add(By.xpath("//a[contains(text(),'Dip Mixes')]"));
+		list.add(By.xpath("//a[contains(text(),'Merchandising & Displays')]"));
+		list.add(By.xpath("//a[contains(text(),'Promotional Materials')]"));
+		
+		
+		
+		return list;
+	}
+
+	
+	
+	
 	
 
 	static By url_Bac = By.xpath("//p//a[contains(text(),'Bac')]");
@@ -157,7 +185,7 @@ public class Locators
 	static By contentHead = By.xpath("//div[@id='content']//h1");
 	static By url_essentialsOils= By.xpath("//a[contains(text(),'100% Pure Essential Oils')]");
 	
-	
+	static By url_BottleSpices= By.xpath("//a[contains(text(),'Bottled Spices')]");
 	static By url_Vanillas = By.xpath("//p//a[contains(text(),'Vanillas of the World')]");
 	static By url_VegetableGlycerin = By.xpath("//p//a[contains(text(),'Vegetable Glycerin')]");
 	static By url_BulkDisplays = By.xpath("//a[contains(text(),'Bulk Displays')]");

@@ -43,6 +43,8 @@ public class CustomLibarary extends Locators
 
 		List<WebElement> allLinks = driver.findElements(By.tagName("a"));
 		System.out.println("Link Size "+allLinks.size());
+		
+		
 
 		for (int i = 0; i < allLinks.size(); i++) {
 			for (WebElement link : allLinks) 
@@ -63,24 +65,43 @@ public class CustomLibarary extends Locators
 	public Set<String> getAllURLs1() {
 		Set<String> urlSet = new HashSet<String>();
 
-		List<WebElement> allLinks = driver.findElements(By.tagName("class"));
-		System.out.println("Link Size "+allLinks.size());
-
-		for (int i = 0; i < allLinks.size(); i++) {
-			for (WebElement link : allLinks) 
+		List<WebElement> Allitem = driver.findElements(By.className("item"));
+		
+		
+		
+		for (int i = 1; i <=Allitem.size(); i++)
+		{
+			WebElement sku = driver.findElement(By.xpath("(//p[@class='item'])["+i+"]"));
+			String[] temp = null;
+			String[] temp2 = null;
+			String x;
+			
+			String bodyText = sku.getText();
+			if(bodyText.contains("no image available")|| bodyText.contains("no picture available"))
 			{
-				if (link.getText().equalsIgnoreCase("item"))
-				{
-									
-					urlSet.add(link.getAttribute("href"));
-				}
+				continue;
+				
+			
+			}
+			WebElement url = driver.findElement(By.xpath("(//p[@class='item'])["+i+"]//a"));
+			
+			if(url.getText().equalsIgnoreCase("high") || url.getText().equalsIgnoreCase("high res")  )
+			{
+				
+				
+				temp = sku.getText().split(" ");
+				temp2 = temp[0].split("\\r?\\n");
+				x = temp2[0].replace(" ", ",");
+				
+				//System.out.println("Value of X " + x);	
+			System.out.println(x +" ,"+url.getAttribute("href"));
+			//System.out.println(sku.getText().replaceAll("[^0-9.]", "")+","+url.getAttribute("href"));
+			
 			}
 			
+			
 		}
-		System.out.println(urlSet);
-		System.out.println();
 		return urlSet;
-
 	}
 	
 

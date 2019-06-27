@@ -12,6 +12,7 @@ public class DownloadURL_FR extends CustomLibarary {
   @Test
   public void downloadURl() 
   {
+	  
 	  List<String> allImages = new ArrayList<String>();
 	  String url = "http://crc.frontiercoop.com/fr/products.html";
 	  startBrowser(url);
@@ -21,9 +22,9 @@ public class DownloadURL_FR extends CustomLibarary {
 		  click(urlBy);
 		  String headName = getDriver().findElement(By.xpath("(//h1) [2]")).getText();
 		  System.out.println(headName);
-		  allImages.addAll(getAllURLs());
+		  allImages.addAll(getAllURLs1());
 		  getDriver().navigate().back();
-		  waitTillElementAppears(url_Bac);
+		  waitTillElementAppears(url_essentialsOils);
 	  }
 	 
 	  for(String str : allImages)

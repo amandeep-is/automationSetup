@@ -20,7 +20,7 @@ public class DownloadURL_ACTest extends CustomLibarary{
 		  click(urlBy);
 		  String headName = getDriver().findElement(By.xpath("(//h1) [2]")).getText();
 		  System.out.println(headName);
-		  allImages.addAll(getAllURLs());
+		  allImages.addAll(getAllURLs1());
 		  getDriver().navigate().back();
 		  waitTillElementAppears(url_essentialsOils);
 	  }
