@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5775272" started-at="2019-06-25T03:53:24Z" finished-at="2019-06-25T05:29:39Z">
+  <suite name="Default suite" duration-ms="5269491" started-at="2019-07-02T09:23:32Z" finished-at="2019-07-02T10:51:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5775272" started-at="2019-06-25T03:53:24Z" finished-at="2019-06-25T05:29:39Z">
-      <class name="com.is.automation.test.DownloadURL">
-        <test-method status="PASS" signature="downloadURl()[pri:0, instance:com.is.automation.test.DownloadURL@3b6ddd1d]" name="downloadURl" duration-ms="5775263" started-at="2019-06-25T09:23:24Z" finished-at="2019-06-25T10:59:39Z">
+    <test name="Default test" duration-ms="5269491" started-at="2019-07-02T09:23:32Z" finished-at="2019-07-02T10:51:22Z">
+      <class name="com.is.automation.test.SelectASIN">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.is.automation.test.SelectASIN@4233e892]" name="login" duration-ms="5269479" started-at="2019-07-02T14:53:32Z" finished-at="2019-07-02T16:21:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- downloadURl -->
-      </class> <!-- com.is.automation.test.DownloadURL -->
+        </test-method> <!-- login -->
+      </class> <!-- com.is.automation.test.SelectASIN -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

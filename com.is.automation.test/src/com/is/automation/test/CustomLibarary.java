@@ -7,8 +7,9 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
-
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.Keys;
@@ -36,6 +37,45 @@ public class CustomLibarary extends Locators
 		String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL, Keys.RETURN);
 		driver.findElement(By.linkText(url)).sendKeys(selectLinkOpeninNewTab);
 
+	}
+	
+	
+	public static String generateRandomString()
+	{
+		
+		String randomString = RandomStringUtils.randomAlphabetic(20);
+		
+		return randomString;
+	}
+	
+	
+	
+	public static void ifStoreNameExists(By locator , String storeName)
+	{
+		if(getDriver().findElement(locator).isDisplayed())
+		{
+			String NewStoreName = storeName + RandomStringUtils.randomAlphabetic(5);
+			 clearAndSend(shopifyPartner_input_StoreName, NewStoreName);
+		}
+		
+		
+	}
+	
+	
+	public static void verifyRadioButtonIsSelected(By locator)
+	{
+		
+		
+		if(getDriver().findElement(locator).isSelected()==true)
+		{
+		LOGGER.info("Radio Button is selected");
+		}
+		
+		else
+		{
+			
+			LOGGER.info("Radio Button is Not selected");
+		}
 	}
 
 	public Set<String> getAllURLs() {
@@ -148,6 +188,16 @@ public class CustomLibarary extends Locators
 
 	}
 
+	public static String gettextOnLocator(By locator)
+
+	{
+		String textonElement = driver.findElement(locator).getText();
+		return textonElement;
+	
+	}
+	
+	
+	
 	public static boolean verifyText(String text1, String text2)
 
 	{
@@ -186,6 +236,15 @@ public class CustomLibarary extends Locators
 			return false;
 		}
 
+	}
+	
+	
+	public static int getIntFromString(String text)
+	{
+		String textNumber = text.replaceAll("[^0-9.]", "");
+		int number = Integer.parseInt(textNumber);
+		return number;
+		
 	}
 
 	public static void pressEnter(By locator) {
@@ -247,8 +306,10 @@ public class CustomLibarary extends Locators
 		}
 	}
 
-	void staticWait(int timeout) {
-		getDriver().manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
+	void staticWait() throws InterruptedException {
+		
+		Thread.sleep(5000);
+		
 
 	}
 

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.is.automation.test.DownloadURL">
+      <class name="com.is.automation.test.SelectASIN">
         <methods>
-          <include name="downloadURl"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- com.is.automation.test.DownloadURL -->
+      </class> <!-- com.is.automation.test.SelectASIN -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

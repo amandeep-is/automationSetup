@@ -40,12 +40,16 @@ public class Locators
 	static By sideBar_link_Products = By.xpath("//span[@class='nav-label' and contains (text(),'Products')]");
 
 	static By sideBar_link_ProductSearch = By.xpath("//a[@href='#/products/search']");
+	
+	static By sideBar_Link_asin = By.xpath("//a[@href='#/products/asins']");
 
+	static By asin_header= By.xpath("//h2[@class='col-xs-8']");
+	static By asin_newButton= By.xpath("//button[@class='btn btn-warning' and @ng-click= 'saveAsin(next_asin.new_asin)']");
 	static By ProductSearch_Heading_skuLookUp= By.xpath("//h2[@class='col-xs-3' and contains(text(),'SKU Lookup')]");
 	static By ProductSearch_Input_SKU= By.xpath("//input[@placeholder= '(required)']");
 	static By Homepage_loginName= By.xpath("//a[@class='ng-binding dropdown-toggle']");
 	
-	
+	static By asin_remainItems= By.xpath("//span[@class='label label-warning ng-binding']");
 	
 	
 	
@@ -60,10 +64,19 @@ public class Locators
 	static By shopifyPartner_partnerAccount= By.xpath("//span[@class=\"text-with-icon__text type--bold\" and contains(text(),'Inventory Source') ]");
 	static By shopifyPartner_stores= By.xpath("//span[@class='ui-nav__label ui-nav__label--parent'and contains(text(),'Store')]");
 	static By shopifyPartner_addStore= By.xpath("//div[@class='ui-title-bar__actions-group']//a[@class='ui-button ui-button--primary ui-title-bar__action' and contains(text(),'Add store')]");
-	static By shopifyPartner_addStore_devStore= By.id("//input[@name='ChoiceList2' and @value = 'dev_store']");
-
-	static By shopifyPartner_captcha = By.xpath("//div[@class='rc-anchor rc-anchor-normal rc-anchor-light']");
+	static By shopifyPartner_addStore_devStore= By.xpath("(//span[@class='Polaris-RadioButton__Backdrop'])[1]");
+	static By shopifyPartner_input_StoreName= By.xpath("//input[@name='signup[shop_name]']");
+	static By shopifyPartner_input_URL= By.xpath("//input[@name='storeDomain']");
+	static By shopifyPartner_input_Password= By.xpath("//input[@name='signup[password]']");
+	static By shopifyPartner_input_Confirm_Password= By.xpath("//input[@name='signup[confirm_password]']");
 	
+	static By shopifyPartner_Error_SameNameExists = By.xpath("//div[@id='TextField2Error']");
+	static By shopifyPartner_Button_Save = By.xpath("//button[@class='Polaris-Button Polaris-Button--primary' and @aria-label='Save']");
+	
+	static By shopifyPartner_Error_OnlineStore = By.xpath("//span[contains(text(),'Online Store')]");
+	
+	static By shopifyPartner_Error_DisablePassword = By.xpath("//span[contains(text(),'Disable password')]");
+	static By shopifyPartner_CheckBox_DisablePassword = By.xpath("(//span[@class='p_idoor'])[1]");
 	
 	//Frontier
 	
