@@ -196,6 +196,15 @@ public class CustomLibarary extends Locators
 	
 	}
 	
+	public static void switchToAnotheTab()
+	{
+		 ArrayList tabs = new ArrayList (getDriver().getWindowHandles());
+		    System.out.println(tabs.size());
+		getDriver().switchTo().window((String) tabs.get(1));
+		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
+		
+	}
+	
 	
 	
 	public static boolean verifyText(String text1, String text2)
@@ -248,6 +257,14 @@ public class CustomLibarary extends Locators
 	}
 
 	public static void pressEnter(By locator) {
+		WebDriver getDriver = getDriver();
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		WebElement element = getDriver.findElement(locator);
+		element.sendKeys(Keys.ENTER);
+
+	}
+	
+	public static void openNewTab(By locator) {
 		WebDriver getDriver = getDriver();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		WebElement element = getDriver.findElement(locator);

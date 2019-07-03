@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5269491" started-at="2019-07-02T09:23:32Z" finished-at="2019-07-02T10:51:22Z">
+  <suite name="Default suite" duration-ms="189380" started-at="2019-07-03T08:57:18Z" finished-at="2019-07-03T09:00:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5269491" started-at="2019-07-02T09:23:32Z" finished-at="2019-07-02T10:51:22Z">
-      <class name="com.is.automation.test.SelectASIN">
-        <test-method status="PASS" signature="login()[pri:0, instance:com.is.automation.test.SelectASIN@4233e892]" name="login" duration-ms="5269479" started-at="2019-07-02T14:53:32Z" finished-at="2019-07-02T16:21:22Z">
+    <test name="Default test" duration-ms="189380" started-at="2019-07-03T08:57:18Z" finished-at="2019-07-03T09:00:28Z">
+      <class name="com.is.automation.test.CreateNewShopifyStore">
+        <test-method status="PASS" signature="createNewShopifyStore()[pri:0, instance:com.is.automation.test.CreateNewShopifyStore@47987356]" name="createNewShopifyStore" duration-ms="189369" started-at="2019-07-03T14:27:18Z" finished-at="2019-07-03T14:30:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-      </class> <!-- com.is.automation.test.SelectASIN -->
+        </test-method> <!-- createNewShopifyStore -->
+      </class> <!-- com.is.automation.test.CreateNewShopifyStore -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

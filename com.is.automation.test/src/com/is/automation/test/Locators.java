@@ -74,9 +74,16 @@ public class Locators
 	static By shopifyPartner_Button_Save = By.xpath("//button[@class='Polaris-Button Polaris-Button--primary' and @aria-label='Save']");
 	
 	static By shopifyPartner_Error_OnlineStore = By.xpath("//span[contains(text(),'Online Store')]");
-	
+	static By shopifyPartner_APPS = By.xpath("//span[contains(text(),'Apps')]");
 	static By shopifyPartner_Error_DisablePassword = By.xpath("//span[contains(text(),'Disable password')]");
 	static By shopifyPartner_CheckBox_DisablePassword = By.xpath("(//span[@class='p_idoor'])[1]");
+	static By shopifyPartner_link_vistAPPShopifyPage = By.xpath("//a[@class='p_1wLbD p_1eCDN']");
+	static By shopifyPartner_input_searchAPP = By.xpath("//input[@class='marketing-input ui-search-suggestions__input hero-search-form__input']");
+	static By shopifyPartner_inventorySource_APP = By.xpath("//h4[@class='ui-app-card__name' and contains(text(),'Inventory Source')]");
+	static By shopifyAppStore_Button_AddApp = By.xpath("//input[@class='marketing-button ui-app-store-hero__cta-button']");
+	static By shopifyAppStore_Button_InstallApp	= By.xpath("//button[@class='ui-button ui-button--primary']");
+	static By shopifyAppStore_Button_Login	= By.xpath("//a[@class='btn btn-primary btn-lg' and contains(text(),'Login')]");
+	static By shopifyAppStore_Button_ISLogin= By.xpath("//input[@placeholder='Email']") ;
 	
 	//Frontier
 	

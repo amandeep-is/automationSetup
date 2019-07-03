@@ -13,7 +13,10 @@ public class CreateNewShopifyStore extends CustomLibarary {
 	  String email = "integrations@inventorysource.com";
 	  String password = "Aut0Inventory!";
 	  
-	  String storeName = "RSR-Premium-Retesting";   //"test"+ generateRandomString();
+	  String isUserName = "amandeep.singh@inventorysource.com";
+	  String isPassword = "Tester#321";
+	  
+	  String storeName = "test"+ generateRandomString();
 	  String StorePassword = "demostore3";
 	  startBrowser(url);
 	  waitTillElementAppears(shopifyPartner_login_button);
@@ -52,9 +55,28 @@ public class CreateNewShopifyStore extends CustomLibarary {
 	  
 	  getDriver().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	  waitTillElementAppears(shopifyPartner_Error_OnlineStore);
-	  click(shopifyPartner_Error_OnlineStore);
-	  waitTillElementAppears(shopifyPartner_CheckBox_DisablePassword);
-	  click(shopifyPartner_CheckBox_DisablePassword);
+	  click(shopifyPartner_APPS);
+	  waitElementclickable(shopifyPartner_link_vistAPPShopifyPage);
+	  click(shopifyPartner_link_vistAPPShopifyPage);
+	  switchToAnotheTab();
+	  waitTillElementAppears(shopifyPartner_input_searchAPP);
+	  clearAndSend(shopifyPartner_input_searchAPP, "Inventory Source");
+	  pressEnter(shopifyPartner_input_searchAPP);
+	  waitElementclickable(shopifyPartner_inventorySource_APP);
+	  click(shopifyPartner_inventorySource_APP);
+	  waitElementclickable(shopifyAppStore_Button_AddApp);
+	  click(shopifyAppStore_Button_AddApp);
+	  waitElementclickable(shopifyAppStore_Button_InstallApp);
+	  click(shopifyAppStore_Button_InstallApp);
+	  waitElementclickable(shopifyAppStore_Button_Login);
+	  click(shopifyAppStore_Button_Login);
+	  waitTillElementAppears(shopifyAppStore_Button_ISLogin);
+	  clearAndSend(shopifyAppStore_Button_ISLogin, isUserName);
+	  clearAndSend(placeHolder_Login_Password, isPassword);
+	  click(button_Login_Login);
+	  
+	//  openNewTab(button_Login_Login);
+	  
 	  
   }
 }
