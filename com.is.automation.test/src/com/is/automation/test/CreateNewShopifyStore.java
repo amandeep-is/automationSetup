@@ -15,10 +15,13 @@ public class CreateNewShopifyStore extends CustomLibarary {
 	  
 	  String isUserName = "amandeep.singh@inventorysource.com";
 	  String isPassword = "Tester#321";
+	  String adminUrl = "https://admin.inventorysource.com/";
+	  
 	  
 	  String storeName = "test"+ generateRandomString();
 	  String StorePassword = "demostore3";
 	  startBrowser(url);
+	 
 	  waitTillElementAppears(shopifyPartner_login_button);
 	  click(shopifyPartner_login_button);
 	  waitElementclickable(shopifyPartner_email_login);
@@ -75,7 +78,13 @@ public class CreateNewShopifyStore extends CustomLibarary {
 	  clearAndSend(placeHolder_Login_Password, isPassword);
 	  click(button_Login_Login);
 	  
-	//  openNewTab(button_Login_Login);
+	  openNewTab(adminUrl);
+	  loginInventorySource(isUserName, isPassword);
+	  clearAndSend(input_homepage_searchUsers, "1201792");
+	  pressEnter(input_homepage_searchUsers);
+	  waitTillElementAppears(click_UID3rdPartyApps);
+	  click(click_UID3rdPartyApps);
+	  
 	  
 	  
   }

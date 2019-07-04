@@ -12,6 +12,7 @@ import java.util.Set;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -264,12 +265,12 @@ public class CustomLibarary extends Locators
 
 	}
 	
-	public static void openNewTab(By locator) {
-		WebDriver getDriver = getDriver();
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		WebElement element = getDriver.findElement(locator);
-		element.sendKeys(Keys.ENTER);
-
+	public static void openNewTab(String newUrl) {
+		
+		((JavascriptExecutor) getDriver()).executeScript("window.open();", new Object[0]);
+		switchToAnotheTab();
+		getDriver().get(newUrl);
+	
 	}
 
 	public static void clearCookies() {

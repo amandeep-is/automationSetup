@@ -13,7 +13,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Locators 
 {
-	public static WebDriver driver = new ChromeDriver();;
+	public static WebDriver driver = new ChromeDriver();
+	
 	public static WebDriver getDriver()
 	{
 		ChromeOptions options = new ChromeOptions();
@@ -35,6 +36,9 @@ public class Locators
 	
 	static By input_homepage_searchUsers = By.xpath("//input[@name='jump_to_uid']");
 	static By click_homepage_searchUsers = By.xpath("//input[@name='jump_to_uid']");
+	
+	static By click_UID3rdPartyApps = By.xpath("//div[contains(text(),'3rd Party Apps')]");
+	
 	
 	static By heading_userPage_UID = By.xpath("//h2[@class='ng-binding' and contains(text(),'@inventorysource')]");
 	static By sideBar_link_Products = By.xpath("//span[@class='nav-label' and contains (text(),'Products')]");
@@ -84,6 +88,7 @@ public class Locators
 	static By shopifyAppStore_Button_InstallApp	= By.xpath("//button[@class='ui-button ui-button--primary']");
 	static By shopifyAppStore_Button_Login	= By.xpath("//a[@class='btn btn-primary btn-lg' and contains(text(),'Login')]");
 	static By shopifyAppStore_Button_ISLogin= By.xpath("//input[@placeholder='Email']") ;
+	static By app_image_IS = By.xpath("//img[@class='img-responsive large-logo']");
 	
 	//Frontier
 	
