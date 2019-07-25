@@ -38,12 +38,27 @@ public class Locators
 	static By click_homepage_searchUsers = By.xpath("//input[@name='jump_to_uid']");
 	
 	static By click_UID3rdPartyApps = By.xpath("//div[contains(text(),'3rd Party Apps')]");
+	static By button_stores = By.xpath("//div[@class='ng-binding ng-scope' and contains(text(),'Stores')]");
+	static By thirdrdParty_table_URL = By.xpath("(//td[@class='ng-binding'])[2]");
+	static By thirdrdParty_table_token = By.xpath("(//td[@class='ng-binding'])[3]");
+	static By thirdrdParty_table_email = By.xpath("(//td[@class='ng-binding'])[4]");
 	
 	
 	static By heading_userPage_UID = By.xpath("//h2[@class='ng-binding' and contains(text(),'@inventorysource')]");
 	static By sideBar_link_Products = By.xpath("//span[@class='nav-label' and contains (text(),'Products')]");
-
+	static By admin_AddStore = By.xpath("//div[@class='btn btn-primary' and contains(text(),'Add Store')]");
+	static By addStore_SelectMarket = By.xpath("(//div[@class='config']//select)[1]");
+	static By addStore_StoreStatus = By.xpath("(//div[@class='config']//select)[2]");
 	static By sideBar_link_ProductSearch = By.xpath("//a[@href='#/products/search']");
+	static By addStore_StoreName = By.xpath("(//div[@class='config ng-scope']//input)[1]");
+	
+	static By addStore_StoreURL = By.xpath("(//div[@class='config ng-scope']//input)[2]");
+	static By addStore_StoreAdminURL = By.xpath("(//div[@class='config ng-scope']//input)[3]");
+	static By addStore_StoreLogin = By.xpath("(//div[@class='config ng-scope']//input)[4]");
+	static By addStore_StorePassword = By.xpath("(//div[@class='config ng-scope']//input)[5]");
+	static By addStore_DataBasePassword = By.xpath("(//div[@class='config ng-scope']//input)[11]");
+	static By addStore_Button_add = By.xpath("//button[@class='btn btn-primary ng-binding ng-isolate-scope ladda-button ng-scope']");
+
 	
 	static By sideBar_Link_asin = By.xpath("//a[@href='#/products/asins']");
 

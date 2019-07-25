@@ -18,6 +18,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.logging.Logger;
 
@@ -165,6 +166,16 @@ public class CustomLibarary extends Locators
 		WebElement element = getDriver.findElement(locator);
 		element.clear();
 		element.sendKeys(key);
+	}
+	
+	public static void selectFromDropDown(String option , By locator )
+	{
+		
+		
+		Select dropdown = new Select(getDriver().findElement(locator));
+		dropdown.selectByVisibleText(option);
+		
+		
 	}
 
 	public static void waitTillElementAppears(By locator)
