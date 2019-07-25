@@ -1,5 +1,8 @@
 package com.is.automation.test;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.ArrayList;

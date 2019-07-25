@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.is.automation.test.DownloadURL_FR"/>
+      <class name="com.is.automation.test.DownloadURL_SO"/>
+      <class name="com.is.automation.test.Script1"/>
+      <class name="com.is.automation.test.SelectASIN"/>
+      <class name="com.is.automation.test.SearchProduct"/>
+      <class name="com.is.automation.test.CreateNewShopifyStore"/>
+      <class name="com.is.automation.test.DownloadURL_ACTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

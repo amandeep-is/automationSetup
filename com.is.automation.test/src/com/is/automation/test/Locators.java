@@ -78,6 +78,8 @@ public class Locators
 	static By shopifyPartner_Button_Save = By.xpath("//button[@class='Polaris-Button Polaris-Button--primary' and @aria-label='Save']");
 	
 	static By shopifyPartner_Error_OnlineStore = By.xpath("//span[contains(text(),'Online Store')]");
+	static By shopifyPartner_preferences = By.xpath("//span[@class='p_2UYjg' and contains(text(),'Preferences')]");
+	static By shopifyPartner_DisablePassword = By.xpath("//input[@class='p_1Kfuo' and @id='Checkbox9']");
 	static By shopifyPartner_APPS = By.xpath("//span[contains(text(),'Apps')]");
 	static By shopifyPartner_Error_DisablePassword = By.xpath("//span[contains(text(),'Disable password')]");
 	static By shopifyPartner_CheckBox_DisablePassword = By.xpath("(//span[@class='p_idoor'])[1]");

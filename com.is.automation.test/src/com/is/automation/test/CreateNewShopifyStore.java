@@ -1,5 +1,9 @@
 package com.is.automation.test;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.annotations.Test;
@@ -18,7 +22,7 @@ public class CreateNewShopifyStore extends CustomLibarary {
 	  String adminUrl = "https://admin.inventorysource.com/";
 	  
 	  
-	  String storeName = "test"+ generateRandomString();
+	  String storeName = "RSR_Latest"+currentDateTime();
 	  String StorePassword = "demostore3";
 	  startBrowser(url);
 	 
@@ -61,7 +65,7 @@ public class CreateNewShopifyStore extends CustomLibarary {
 	  click(shopifyPartner_APPS);
 	  waitElementclickable(shopifyPartner_link_vistAPPShopifyPage);
 	  click(shopifyPartner_link_vistAPPShopifyPage);
-	  switchToAnotheTab();
+	  switchToAnotheTab(1);
 	  waitTillElementAppears(shopifyPartner_input_searchAPP);
 	  clearAndSend(shopifyPartner_input_searchAPP, "Inventory Source");
 	  pressEnter(shopifyPartner_input_searchAPP);
@@ -84,6 +88,16 @@ public class CreateNewShopifyStore extends CustomLibarary {
 	  pressEnter(input_homepage_searchUsers);
 	  waitTillElementAppears(click_UID3rdPartyApps);
 	  click(click_UID3rdPartyApps);
+	  
+	  
+	  switchToAnotheTab(0);
+	  waitTillElementAppears(shopifyPartner_Error_OnlineStore);
+	  click(shopifyPartner_Error_OnlineStore);
+	  waitTillElementAppears(shopifyPartner_preferences);
+	  click(shopifyPartner_preferences);
+	  waitTillElementAppears(shopifyPartner_DisablePassword);
+	  click(shopifyPartner_DisablePassword);
+	  
 	  
 	  
 	  

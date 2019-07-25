@@ -7,7 +7,8 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Random;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Set;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
@@ -49,6 +50,16 @@ public class CustomLibarary extends Locators
 		return randomString;
 	}
 	
+	public static String currentDateTime()
+	{
+		
+		Calendar calendar = Calendar.getInstance();
+		
+		Date currentDateTime ;
+		currentDateTime = calendar.getTime();
+		
+		return currentDateTime.toString().trim();		
+	}
 	
 	
 	public static void ifStoreNameExists(By locator , String storeName)
@@ -197,11 +208,11 @@ public class CustomLibarary extends Locators
 	
 	}
 	
-	public static void switchToAnotheTab()
+	public static void switchToAnotheTab(int tabsize)
 	{
 		 ArrayList tabs = new ArrayList (getDriver().getWindowHandles());
 		    System.out.println(tabs.size());
-		getDriver().switchTo().window((String) tabs.get(1));
+		getDriver().switchTo().window((String) tabs.get(tabsize));
 		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
 		
 	}
@@ -268,7 +279,7 @@ public class CustomLibarary extends Locators
 	public static void openNewTab(String newUrl) {
 		
 		((JavascriptExecutor) getDriver()).executeScript("window.open();", new Object[0]);
-		switchToAnotheTab();
+		switchToAnotheTab(1);
 		getDriver().get(newUrl);
 	
 	}
